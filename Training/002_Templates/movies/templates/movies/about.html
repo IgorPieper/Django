@@ -1,0 +1,54 @@
+{% extends "movies/_base.html" %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block header %}
+<h1>About Me</h1>
+<p>Kilka słów o mnie</p>
+{% endblock %}
+
+{% block content %}
+
+<section class="about" style="
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 8px;
+">
+
+    <img
+        src="{% static 'movies/me.png' %}"
+        alt="Me"
+        style="
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            background: #000;
+        "
+    >
+
+    <div class="about-content">
+        <h2>Cześć 👋</h2>
+        <p>
+            Nazywam się Igor. Interesuję się filmami, programowaniem
+            i tworzeniem rzeczy, które działają nawet jeśli czasem
+            wyglądają podejrzanie.
+        </p>
+
+        <p>
+            Lubię najgorsze filmy świata, bo pokazują,
+            jak bardzo można coś spieprzyć i nadal to wypuścić.
+        </p>
+    </div>
+
+</section>
+
+{% endblock %}
+
+{% block footer %}
+© About Me
+{% endblock %}

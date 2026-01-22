@@ -1,0 +1,27 @@
+{% extends "movies/_base.html" %}
+
+{% block title %}Najgorsze filmy wszech czasów{% endblock %}
+
+{% block header %}
+    <h1>🎬 Najgorsze filmy wszech czasów</h1>
+    <p>Filmy tak złe, że aż bolą</p>
+{% endblock %}
+
+{% block content %}
+
+{% if movies %}
+    {% for movie in movies %}
+        <div>
+            <h2>{{ movie }}</h2>
+            <p>Film tak zły, że zasłużył na miejsce na tej liście.</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No favorite movies..</p>
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+© Najgorsze Filmy
+{% endblock %}

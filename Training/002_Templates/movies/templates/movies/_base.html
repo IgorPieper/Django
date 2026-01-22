@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #eee;
+        }
+
+        nav {
+            background: #000;
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            gap: 14px;
+        }
+
+        .nav-inner a {
+            color: #eee;
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 6px;
+        }
+
+        .nav-inner a:hover {
+            background: #1c1c1c;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #000;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            font-size: 0.9rem;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="{% url 'index' %}">Strona główna</a>
+        <a href="{% url 'about' %}">O mnie</a>
+    </div>
+</nav>
+
+<header>
+    {% block header %}{% endblock %}
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    {% block footer %}{% endblock %}
+</footer>
+
+</body>
+</html>
